@@ -27,9 +27,6 @@ public class EmployeeServicesImpl implements EmployeeServices{
     @Override
     public List<Employee> allEmployeeList() throws EmployeeException {
         List<Employee> employees = employeeRepo.findAll();
-        if(employees.isEmpty()){
-            throw new EmployeeException("No amy record founds");
-        }
         return employees;
     }
 
